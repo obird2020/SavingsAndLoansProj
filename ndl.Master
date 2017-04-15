@@ -1,0 +1,107 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="ndl.master.vb" Inherits="ndl.ndl" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="~/Styles/styles.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+<body>
+
+   <div id="Main">
+
+       <form id="form1" runat="server">
+
+         <div id="banner">
+         
+            <img src="/images/logo.jpg" />
+            <asp:LinkButton ID="lnkLogOut" runat="server" CausesValidation="false">Logout</asp:LinkButton>
+            <asp:LinkButton ID="lnkUser" runat="server" ausesValidation="false">Admin</asp:LinkButton>
+            <h4>NDL MONEY LENDING LIMITED</h4>
+
+            <asp:HiddenField ID="hdUserID" runat="server" Value="0" />
+            <asp:HiddenField ID="hdUserMail" runat="server" />
+
+         </div>
+
+         <div id="menus">
+            <ul>
+              <li><a href="#">Administration</a>
+                  <ul>
+                     <li><a href="/Administration/Profile.aspx">Company Setup</a></li>
+                     <li><a href="/Administration/Users.aspx">Users</a></li>
+                     <li><a href="/Administration/Credit_Officers.aspx">Credit Officers</a></li>
+                     <li><a href="#">Security</a></li>
+                  </ul>
+              </li>
+
+              <li><a href="#">Setups</a>
+                  <ul>
+                     <li><a href="#">General</a>
+                        <ul>
+                           <li><a href="/Setups/Countries.aspx">Countries</a></li>
+                           <li><a href="/Setups/ResidenceTypes.aspx">Residence Types</a></li>
+                           <li><a href="/Setups/Territories.aspx">Territories</a></li>
+                           <li><a href="/Setups/EducationalLevels.aspx">Educational Levels</a></li>
+                           <li><a href="/Setups/IDTypes.aspx">ID Types</a></li>
+                           <li><a href="/Setups/Tenders.aspx">Tenders</a></li>
+                           <li><a href="/Setups/Titles.aspx">Titles</a></li>
+                           <li><a href="/Setups/MaritalStatus.aspx">Marital Status</a></li>
+                           <li><a href="/Setups/Religions.aspx">Religions</a></li>
+                        </ul>
+                     </li>
+
+                     <li><a href="#">Loans</a>
+                         <ul>
+                           <li><a href="/Setups/BankAccTypes.aspx">Bank Account Types</a></li>
+                           <li><a href="/Setups/Banks.aspx">Banks</a></li>
+                           <li><a href="/Setups/BanksBranches.aspx">Bank Branches</a></li>
+                           <li><a href="/Setups/SecurityTypes.aspx">Loan Security Types</a></li>
+                           <li><a href="/Setups/PaymentModes.aspx">Loan Repayment Modes</a></li>
+                           <li><a href="/Setups/PaymentPeriods.aspx">Payment Durations</a></li>
+                        </ul>
+                     </li>
+
+                     <li><a href="/Setups/Params.aspx">Additional Parameters</a></li>
+                     <li><a href="/Setups/ParamFields.aspx">Parameter Fields</a></li>
+
+                  </ul>
+              </li>
+
+              <li><a href="#">Transactions</a>
+                   <ul>
+                     <li><a href="/Transactions/Customers.aspx">Customers</a></li>
+                      <li><a href="/Transactions/Loans.aspx">Loans</a></li>
+                      <li><a href="#">Loan Approval</a></li>
+                   </ul>
+              </li>
+              <li><a href="#">Reports</a></li>
+            </ul>
+         </div>
+
+         <div id="MainContents">
+
+         </div>
+
+          <div id="Content">
+              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+              </asp:ContentPlaceHolder>
+          </div>
+
+          <div id="footer">
+              ndl money lending
+        </div>
+
+       </form>
+
+    </div>
+
+</body>
+</html>
